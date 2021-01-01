@@ -1,0 +1,61 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UAE VAT calculator - Tax Calculator </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="description"
+          content="UAE VAT Calculator , Dubai VAT Tax Calculator , Easy Online VAT calculator tax amount calculator. To calculate VAT Tax just type the amount and press calculate button to get result .">
+    <meta name="keywords"
+          content="UAE VAT Calculator , FTA VAT Calculator , Dubai Tax vat calculator, UAE Tax 5 % VAT Calculator, online vat calculator, vat calc, how to calculate vat, calculate vat, net amount, calculate VAT Tax , Online Simple VAT Calculator">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css" >
+    <script src="js/main.js"></script>
+   
+</head>
+<body onLoad="document.forms.formnds.sum.focus();">
+<header>
+    <h1>UAE VAT Tax Calculator</h1>
+</header>
+<section class="instructions padding">
+    <p>Calculate UAE VAT : <b>Calculate net amount tax </b> with ot without VAT in one click . </p>
+    <p>Enter the value and press enter or click calculate button to see VAT percentage.</p>
+</section>
+<section class="calculator-form">
+    <form id="formnds"
+          onSubmit="calculatorSubmit();return false;">
+        <div class="amount form-group">
+            <label>Amount: <input type="number" name="sum" id="sum" step="0.01" min="0" value=""></label>
+        </div>
+        <div class="form-group">
+            <input type="radio" name="action" value="v" id="formactv" checked><label for="formactv"> exclude
+            VAT </label>
+            <input type="radio" name="action" value="n" id="formactn"><label for="formactn"> add VAT </label>
+            <input type="number" size="6" min="0" step="0.01" name="vat" id="vat" value="5">%
+            <input type="submit" class="calculatebutton" value="Calculate">
+        </div>
+        <div class="clearfix"></div>
+    </form>
+</section>
+<section id="results" class="padding clearfix"></section>
+<!-- Responsive horizontal for VAT -->
+
+
+
+
+<hr>
+<footer class=" footer">
+    Above VAT Calculator for reference purpose only . You are using this website at your own risk. <br> We are not responsible any loses. <br>
+    <hr>
+    <div class="container"><span>
+        Made with <i class="fa fa-heart pulse" style="color:red;" > </i> in UAE  <a href="https://madinadeals.com">Madina Deals</a> Team
+    </span></div>
+    
+</footer>
+
+</body>
+</html>
