@@ -19,7 +19,7 @@ function getVat() {
 }
 
 function getOperation() {
-    return document.getElementById('formactv').checked ? 'exclude' : 'add';
+    return document.getElementById('formactv').checked ? 'include' : 'add';
 }
 
 function calculatorSubmit() {
@@ -33,7 +33,7 @@ function calculatorSubmit() {
     }
     var operation = getOperation();
     var result;
-    if (operation === 'exclude') {
+    if (operation === 'include') {
         result = amount - amount / (1 + vat / 100);
     } else if (operation === 'add') {
         result = amount * (1 + vat / 100);
@@ -61,7 +61,7 @@ function addResults(amount, vat, operation, result) {
         resultBlock('Operation:', operation) +
         ( operation === 'add' ?
             resultBlock('VAT added:', toCurrencyString(parseFloat(result) - parseFloat(amount))) + resultBlock('Gross amount:', result) :
-            resultBlock('VAT excluded:', result) + resultBlock('Net amount:', toCurrencyString(parseFloat(amount) - parseFloat(result))) ) +
+            resultBlock('VAT included:', result) + resultBlock('Net amount:', toCurrencyString(parseFloat(amount) - parseFloat(result))) ) +
         '</div>';
     var innerHTML = document.getElementById('results').innerHTML;
     innerHTML = html + innerHTML;
